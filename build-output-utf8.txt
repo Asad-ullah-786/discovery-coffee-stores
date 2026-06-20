@@ -1,0 +1,233 @@
+﻿
+> discover-coffee-stores@0.1.0 build
+> next build
+
+node.exe : ΓÜá `images.domains` is deprecated in favor of `images.remotePatterns`. 
+Please update next.config.js to protect your application from malicious users.
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (ΓÜá `images.dom...alicious users.:String) [ 
+   ], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Γû▓ Next.js 16.2.1 (Turbopack)
+- Environments: .env.local
+
+  Running TypeScript ...
+  Finished TypeScript in 189ms ...
+  Creating an optimized production build ...
+Γ£ô Compiled successfully in 1847ms
+  Collecting page data using 11 workers ...
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+  Generating static pages using 11 workers (0/39) ...
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+props {
+  CoffeeStore: [
+    {
+      id: '98c1f18c787f493e61dd23ae',
+      name: 'Coffee Time Donuts',
+      address: '1090 Don Mills Rd, North York, ON, M3C 3R6, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '4c9124191adc370489942dd1',
+      name: 'Coffee Lime & Deli',
+      address: '968 Pape Ave., Toronto, ON, M4K 3V7, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '18bbde40ae6841ed642c983c',
+      name: 'Coffee Time',
+      address: '2146 Danforth Ave, Toronto, ON, M4C 1J9, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '4b759472f964a520c4152ee3',
+      name: "Timothy's Coffee",
+      address: '200 consilium place, Toronto, ON, M3C, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '5aff3c8b89e490002ca035e3',
+      name: 'WFM Coffee Bar',
+      address: '1860 Bayview Ave, Toronto, ON, M4G 3E4, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '664e1b04e378f85185fa71e9',
+      name: "Pablo's Coffee House",
+      address: 'CF Shops at Don Mills, Toronto, ON, M3C 0G2, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '650621309562fb115d4a4f75',
+      name: "Pablo's Coffee House",
+      address: 'Toronto, ON, M3C 0G5, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '4c24f0cdb7b8a59382573de8',
+      name: 'Coffee In',
+      address: 'Lawrence Ave, Toronto, ON, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '4e128bac483bee47ff3bf7d0',
+      name: 'The Coffee Table',
+      address: 'Toronto, ON, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '4ea88fc7f5b9df9610511b8d',
+      name: 'Coffee Time',
+      address: '1471 Eglinton Avenue W., Toronto, ON, M6E 2G6, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '0dc2511191a046eb474ee564',
+      name: 'Coffee Time',
+      address: '3701 Chesswood Dr, North York, ON, M3J 2P6, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '4baa31def964a52037523ae3',
+      name: 'Coffee office',
+      address: '350 Bay St - 7th Floor, Toronto, ON, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '4ed3ae00722e01c5862a579c',
+      name: 'Coffee Time',
+      address: '4447 Sheppard Ave E, Scarborough, ON, M1S 1V3, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '58a5d1e5739d851f1899abc9',
+      name: 'WFM Coffee Bar',
+      address: '4771 Yonge Street, Toronto, ON, M2N 5M5, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '4bdef2a3c3392d7f43a49bd5',
+      name: 'Coffee Time',
+      address: '2340 Dundas West, Toronto, ON, M6P 4A9, Canada',
+      neighborhood: '',
+      imgUrl: null
+    },
+    {
+      id: '557f05ca498ec78ac7b29315',
+      name: 'BalzacΓÇÖs Coffee Roasters',
+      address: '7 Station St, Toronto, ON, M5J 1C3, Canada',
+      neighborhood: '',
+      imgUrl: null
+    }
+  ]
+}
+{ latLong: '', locationErrorMsg: '' }
+  Generating static pages using 11 workers (9/39) 
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+  Generating static pages using 11 workers (19/39) 
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+  Generating static pages using 11 workers (29/39) 
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Error fetching Unsplash photos: p { message: 'expected JSON response from server.' }
+Γ£ô Generating static pages using 11 workers (39/39) in 8.8s
+  Finalizing page optimization ...
+
+Route (pages)                                         Revalidate  Expire
+Γöî ΓùÅ / (2697 ms)
+Γö£   /_app
+Γö£ Γùï /404
+Γö£ ╞Æ /api/createCoffeeStore
+Γö£ ╞Æ /api/favouriteCoffeeStorebyId
+Γö£ ╞Æ /api/getCoffeeStoreById
+Γö£ ╞Æ /api/getCoffeeStoresByLocation
+Γö£ ╞Æ /api/hello
+Γö£ ΓùÅ /coffee-store/[id] (74402 ms)                            10s      1y
+Γöé Γö£ /coffee-store/4ba15904f964a52002af37e3 (3952 ms)
+Γöé Γö£ /coffee-store/5d5b7a9d912a95000758f395 (3747 ms)
+Γöé Γö£ /coffee-store/4dc04e8881545e1cc7e1b868 (3428 ms)
+Γöé Γö£ /coffee-store/53eb9c59498ed0f6cc2f1bcc (3172 ms)
+Γöé Γö£ /coffee-store/98c1f18c787f493e61dd23ae (3045 ms)
+Γöé Γö£ /coffee-store/4b4626fef964a5204a1826e3 (3004 ms)
+Γöé Γö£ /coffee-store/557f05ca498ec78ac7b29315 (2984 ms)
+Γöé Γöö [+26 more paths] (avg 1956 ms)
+Γö£ Γùï /courses/nextjs
+Γöö Γùï /dynamic
+
+Γùï  (Static)   prerendered as static content
+ΓùÅ  (SSG)      prerendered as static HTML (uses getStaticProps)
+╞Æ  (Dynamic)  server-rendered on demand
+

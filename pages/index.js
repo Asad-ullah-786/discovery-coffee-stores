@@ -17,7 +17,7 @@ export async function getStaticProps(context) {
   };
 }
 
-export default function Home(props) {
+export default function Home(props = {}) {
   console.log("props", props);
 
   const { state, dispatch } = useContext(StoreContext);
@@ -25,9 +25,15 @@ export default function Home(props) {
     useTrackLocation();
 
   const [coffeeStores, setCoffeeStores] = useState([]);
-  const [coffeStoresError, setError] = useState(null);
+  const [coffeeStoresError, setError] = useState(null);
   const [hasViewedNearby, setHasViewedNearby] = useState(false);
   const initialRender = useRef(true);
+
+  const coffeeStoreProps = Array.isArray(props.CoffeeStore) ? props.CoffeeStore : [];
+  const cachedCoffeeStores = Array.isArray(state.coffeeStores) ? state.coffeeStores : [];
+  const nearbyCoffeeStores = Array.isArray(coffeeStores) ? coffeeStores : [];
+  const displayCoffeeStores = nearbyCoffeeStores.length > 0 ? nearbyCoffeeStores : cachedCoffeeStores;
+  const showNearbyStores = displayCoffeeStores.length > 0 || hasViewedNearby;
 
   console.log({ latLong, locationErrorMsg });
 
@@ -44,18 +50,29 @@ export default function Home(props) {
       if (latLong && initialRender.current) {
         initialRender.current = false;
         try {
-          const response = await fetch(`/api/getCoffeeStoresByLocation?latLong=${latLong}&limit=30`);
+          const response = await fetch(`/api/getCoffeeStoresByLocation?latLong=${encodeURIComponent(latLong)}&limit=30`);
+
+          if (!response.ok) {
+            throw new Error(`Failed to fetch nearby stores (${response.status})`);
+          }
+
           const coffeeStores = await response.json();
+
+          if (!Array.isArray(coffeeStores)) {
+            throw new Error("Unexpected response format from coffee store API");
+          }
+
           setCoffeeStores(coffeeStores);
           setHasViewedNearby(true);
-          
+
           // Context mein bhi save karo taake back aane par available ho
           dispatch({
             type: ACTION_TYPES.SET_COFFEE_STORES,
-            payload: { coffeeStores },  
-          });   
+            payload: { coffeeStores },
+          });
         } catch (error) {
-          setError(error.message);
+          setCoffeeStores([]);
+          setError(error?.message || "Unable to load nearby stores");
           console.log("Error fetching coffee stores", error);
         }
       }
@@ -84,7 +101,7 @@ export default function Home(props) {
             handleOnClick={handleOnBannerBtnClick}
           />
           {locationErrorMsg && <p>Something went wrong: {locationErrorMsg}</p>}
-          {coffeStoresError && <p>Something went wrong: {coffeStoresError}</p>}
+          {coffeeStoresError && <p>Something went wrong: {coffeeStoresError}</p>}
         </div>
 
         <div className={styles.heroImage}>
@@ -98,11 +115,11 @@ export default function Home(props) {
         </div>
       </main>
       {/* FIX: Context se bhi data check karo */}
-      {(coffeeStores.length > 0 || hasViewedNearby || (state.coffeeStores && state.coffeeStores.length > 0)) && (
+      {showNearbyStores && (
         <div className={styles.sectionWrapper}>
           <h2 className={styles.heading2}>Stores near me</h2>
           <div className={styles.cardLayout}>
-            {(coffeeStores.length > 0 ? coffeeStores : state.coffeeStores || []).map((Coffeestore) => (
+            {displayCoffeeStores.map((Coffeestore) => (
                 <Card
                   key={Coffeestore.id}
                   name={Coffeestore.name}
@@ -118,12 +135,12 @@ export default function Home(props) {
       )}
 
       {/* SECTION 2: Coffee Stores (Ye neechay aayega kyunke ye 'main' se bahar hai) */}
-      {props.CoffeeStore.length > 0 && (
+      {coffeeStoreProps.length > 0 && (
         <>
           <div className={styles.sectionWrapper}>
             <h2 className={styles.heading2}>Toronto Stores</h2>
             <div className={styles.cardLayout}>
-              {props.CoffeeStore.map((Coffeestore) => (
+              {coffeeStoreProps.map((Coffeestore) => (
                 <Card
                   key={Coffeestore.id}
                   name={Coffeestore.name}
