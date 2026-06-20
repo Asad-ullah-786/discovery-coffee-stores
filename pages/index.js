@@ -4,12 +4,24 @@ import Banner from "@/components/banner";
 import Image from "next/image";
 import Card from "@/components/card";
 import { fetchCoffeeStores } from "@/lib/coffee-stores";
+import staticCoffeeStores from "@/data/coffee-stores.json";
 import useTrackLocation from "@/hooks/use-track-location";
 import { useEffect, useState, useRef, useContext } from "react";
 import { StoreContext, ACTION_TYPES } from "@/store/store-context";
 
 export async function getStaticProps(context) {
-  const CoffeeStore = await fetchCoffeeStores();
+  let CoffeeStore = [];
+
+  try {
+    CoffeeStore = await fetchCoffeeStores();
+  } catch (error) {
+    console.error("Error fetching coffee stores for static props:", error);
+  }
+
+  if (!Array.isArray(CoffeeStore) || CoffeeStore.length === 0) {
+    CoffeeStore = staticCoffeeStores;
+  }
+
   return {
     props: {
       CoffeeStore,
@@ -29,7 +41,7 @@ export default function Home(props = {}) {
   const [hasViewedNearby, setHasViewedNearby] = useState(false);
   const initialRender = useRef(true);
 
-  const coffeeStoreProps = Array.isArray(props.CoffeeStore) ? props.CoffeeStore : [];
+  const coffeeStoreProps = Array.isArray(props.CoffeeStore) && props.CoffeeStore.length > 0 ? props.CoffeeStore : staticCoffeeStores;
   const cachedCoffeeStores = Array.isArray(state.coffeeStores) ? state.coffeeStores : [];
   const nearbyCoffeeStores = Array.isArray(coffeeStores) ? coffeeStores : [];
   const displayCoffeeStores = nearbyCoffeeStores.length > 0 ? nearbyCoffeeStores : cachedCoffeeStores;
