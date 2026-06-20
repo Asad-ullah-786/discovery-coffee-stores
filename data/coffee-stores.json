@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "name": "StrangeLove Coffee",
+    "imgUrl": "https://images.unsplash.com/photo-1593443320739-77f74939d0da?fm=jpg&q=60&w=3000&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGF0dGV8ZW58MHx8MHx8fDA%3D",
+    "websiteUrl": "https://www.unsplash.com/",
+    "address": "983 Queen St W, Toronto, ON M6J 1H1",
+    "neighborhood": "at King and Spadina"
+  },
+    {
+        "id": 1,
+        "name": "Jimmy's Coffee",
+        "imgUrl": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "websiteUrl": "https://www.unsplash.com/",
+        "address": "1379 Yonge St, Toronto, ON M4T 1W7",
+        "neighborhood": "at Yonge and Davisville"
+    },
+  {
+      "id": 300,
+        "name": "300 Coffee",
+        "imgUrl": "https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "websiteUrl": "https://www.unsplash.com/",
+        "address": "1379 Yonge St, Toronto, ON M4T 1W7",
+        "neighborhood": "300 at Yonge and Davisville"
+  }
+]

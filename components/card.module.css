@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  justify-content: center;
+   /* Card ko apne grid cell mein center rakhega */
+    padding: 1.5rem;
+}
+
+.cardlink {
+  display: block;
+  /* Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.4); 
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  padding: 1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 300px; /* Desktop par size control karne ke liye */
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+}
+
+/* Hover Effect: Card thora upar uthay ga */
+.cardlink:hover {
+  transform: translatey(5px);
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25);
+}
+
+.cardHeaderWrapper {
+  margin-bottom: 1rem;
+  margin-top: rem;
+}
+
+.cardHeader {
+  color: #373b64; /* Dark color takay readability achi ho */
+  font-size: 1.25rem;
+  font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Agar naam bara ho to '...' dikhaye ga */
+  margin: 0;
+  
+}
+
+.cardImageWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  overflow: hidden; /* Image ke corners round karne ke liye */
+}
+
+.cardImage {
+  object-fit: cover; /* Image ko box mein fit karega baghair kharab kiye */
+  border-radius: 10px;
+}
+
+/* --- Responsive Settings --- */
+
+/* Mobile (Choti screen) */
+@media (max-width: 640px) {
+  .cardlink {
+    max-width: 100%; /* Mobile par poori width le lega */
+  }
+  
+  .cardHeader {
+    font-size: 1.1rem;
+  }
+}

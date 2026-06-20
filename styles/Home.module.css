@@ -1,141 +1,149 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
+.container {
+  /* Sides ka margin kam karne ke liye max-width barha di */
+  max-width: 1440px; 
+  margin: 0 auto;
+  padding: 0 2rem;
   min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  
+  /* align-items: center; <-- Isay comment kiya taake content poori width cover kare, center mein dabay nahi */
 }
 
 .main {
-  display: flex;
-  min-height: 100vh;
   width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
-}
-
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
-}
-
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
-}
-
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
-}
-
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
-}
-
-.ctas {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
-}
-
-.ctas a {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 2rem; 
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+/* Image Wrapper */
+.heroImage {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.heroImage img {
+  max-width: 650px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
+/* Section Wrapper (Heading aur Cards) */
+.sectionWrapper {
+  margin-top: 4rem;
+  padding: 0 1rem;
+  /* Isay container ke barabar rakha taake alignment sahi ho */
+  max-width: 100%; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.heading2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+.cardLayout {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+ 
+}
+
+/* --- Media Queries (Aapki sari logic maintain ki hai) --- */
+
+@media (min-width: 640px) {
+  .cardLayout {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
 
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
+@media (min-width: 1024px) {
+  .cardLayout {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1240px) {
+  .cardLayout {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 768px) {
   .main {
-    padding: 48px 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
+  .heroImage img {
+    max-width: 600px;
+    width: 100%;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+@media (max-width: 767px) {
+  .container {
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: center;
   }
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+  .main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 3rem;
+  }
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+  .title1, .title2 {
+    font-size: 3.5rem !important;
+    line-height: 1.1;
+  }
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+  .subtitle {
+    font-size: 1.5rem !important;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .button {
+    width: 80%;
+    max-width: 300px;
+    padding: 1rem 0;
+    font-size: 1.2rem;
+  }
+
+  .heroImage {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .heroImage img {
+    width: 90% !important;
+    max-width: 450px;
+    height: auto;
+    /* Negative margin overlap ke liye */
+    margin-top: -15rem; 
+  }
+}
+
+@media (max-width: 576px) {
+  .title1, .title2 {
+    font-size: 2.8rem !important;
+  }
+
+  .heroImage img {
+    width: 100% !important;
+    max-width: 350px;
+    margin-top: -13rem;
   }
 }

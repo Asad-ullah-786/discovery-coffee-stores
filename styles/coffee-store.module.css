@@ -1,0 +1,108 @@
+.layout {
+  min-height: 100vh;
+  /* Image wala gradient background */
+  background: linear-gradient(135deg, #ff6b6b 0%, #7048e8 100%);
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-top: 2rem;
+}
+
+/* Desktop layout: 2 Columns */
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+  }
+}
+
+.col1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.backToHomeLink a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.nameg {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: white;
+  margin: 1rem 0;
+}
+
+.storeImgWrapper {
+  margin-top: 0.5rem;
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  aspect-ratio: 4 / 3;  /* Image ke liye perfect aspect ratio */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.storeImgWrapper:hover {
+  transform: translateY(5px);
+}
+
+.storeImg {
+  object-fit: cover;    /* Image ko stretch kiye bina poora fit karega */
+  object-position: center;
+}
+/* Glassmorphism Card (col2) */
+.col2 {
+  background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(12px); /* Frosty effect */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  align-self: center;
+}
+
+.col2:hover {
+  transform: translateY(-5px);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.text {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a202c; /* Dark text for readability */
+  margin-left: 0.75rem;
+}
+
+.upvoteButton {
+  background-color: #4338ca;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+.upvoteButton:hover {
+  background-color: #3730a3;
+}
